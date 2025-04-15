@@ -1,0 +1,31 @@
+Difference between HTTP 1.1 vs HTTP 2:
+
+HTTP : 
+Hypertext Transfer Protocol (HTTP) is an application protocol that is, currently, the foundation of data communication for the World Wide Web.
+HTTP is based on the Client/Server model. Client/Server model can be explained as two computers, Client (receiver of service) and Server (provider of service) that are communicating via requests and responses.
+
+What is HTTP/2?
+In 2015, Internet Engineering Task Force (IETF) release HTTP/2, the second major version of the most useful internet protocol, HTTP. It was derived from the earlier experimental SPDY protocol.
+
+Difference between HTTP 1.1 and HTTP 2:
+
+1). Multiplexing: 
+        HTTP/1.1 uses a separate connection for each request/response, leading to inefficiencies, especially for sites with many resources. HTTP/2 allows multiple requests and responses to be multiplexed over a single connection, reducing latency and improving efficiency.
+
+2). Header Compression: 
+        HTTP/1.1 headers are sent as plaintext with each request/response, leading to overhead, especially for large headers or multiple requests. HTTP/2 compresses headers, reducing overhead and improving performance.
+
+3). Binary Protocol: 
+        HTTP/1.1 uses a text-based protocol, which is human-readable but inefficient to parse for machines. HTTP/2 uses a binary protocol, which is more efficient for parsing and processing, reducing latency.
+
+4). Server Push: 
+        HTTP/1.1 requires separate requests for each resource, even if the server knows the client will need them. HTTP/2 allows servers to push resources to the client proactively, improving page load times by avoiding round trips.
+
+5). Stream Prioritization:
+        HTTP/1.1 Does not have built-in mechanisms for stream prioritization. Requests are processed in the order they are received, which may not align with the importance of resources. HTTP/2 Allows clients to specify the priority of requests, ensuring more important resources are fetched first. This improves the user experience by prioritizing critical content.
+
+6). Flow Control: 
+        HTTP/1.1 Does not have built-in flow control mechanisms. It relies on the underlying TCP/IP protocol for flow control, which may lead to inefficiencies, especially in high-latency or congested networks. HTTP/2 Includes flow control mechanisms to prevent congestion and prioritize data delivery. This allows for more efficient data transmission over varying network conditions, improving overall performance.
+
+7). Security: 
+        HTTP/1.1 Does not have a built-in requirement for secure connections. It is common to see HTTP/1.1 traffic transmitted over unencrypted connections, which poses security risks such as data interception and manipulation by malicious actors. HTTP/2 While not a direct feature of HTTP/2, its adoption has pushed for more widespread use of HTTPS (HTTP Secure) due to the requirement for secure connections in most implementations. This enhances security and privacy for users by encrypting data transmitted between clients and servers.
